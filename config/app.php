@@ -1,7 +1,7 @@
 <?php
 
 return [
-
+    
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -12,9 +12,9 @@ return [
     | any other location as required by the application or its packages.
     |
     */
-
+    
     'name' => env('APP_NAME', 'Laravel'),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -25,9 +25,9 @@ return [
     | services the application utilizes. Set this in your ".env" file.
     |
     */
-
+    
     'env' => env('APP_ENV', 'production'),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
@@ -38,9 +38,9 @@ return [
     | application. If disabled, a simple generic error page is shown.
     |
     */
-
+    
     'debug' => (bool) env('APP_DEBUG', false),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Application URL
@@ -51,11 +51,11 @@ return [
     | your application so that it is used when running Artisan tasks.
     |
     */
-
+    
     'url' => env('APP_URL', 'http://localhost'),
-
+    
     'asset_url' => env('ASSET_URL', null),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -66,9 +66,9 @@ return [
     | ahead and set this to a sensible default for you out of the box.
     |
     */
-
+    
     'timezone' => 'UTC',
-
+    
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
@@ -79,9 +79,9 @@ return [
     | to any of the locales which will be supported by the application.
     |
     */
-
+    
     'locale' => 'en',
-
+    
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -92,9 +92,9 @@ return [
     | the language folders that are provided through your application.
     |
     */
-
+    
     'fallback_locale' => 'en',
-
+    
     /*
     |--------------------------------------------------------------------------
     | Faker Locale
@@ -105,9 +105,9 @@ return [
     | localized telephone numbers, street address information and more.
     |
     */
-
+    
     'faker_locale' => 'en_US',
-
+    
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
@@ -118,11 +118,11 @@ return [
     | will not be safe. Please do this before deploying an application!
     |
     */
-
+    
     'key' => env('APP_KEY'),
-
+    
     'cipher' => 'AES-256-CBC',
-
+    
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
@@ -133,9 +133,9 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
-
+    
     'providers' => [
-
+    
         /*
          * Laravel Framework Service Providers...
          */
@@ -161,11 +161,11 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+    
         /*
          * Package Service Providers...
          */
-
+    
         /*
          * Application Service Providers...
          */
@@ -174,9 +174,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+    
     ],
-
+    
     /*
     |--------------------------------------------------------------------------
     | Class Aliases
@@ -187,7 +187,7 @@ return [
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */
-
+    
     'aliases' => [
 
         'App' => Illuminate\Support\Facades\App::class,

@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Documents;
+use App\Pipelines\EncodeBase64;
+use App\Pipelines\RemoveInsults;
 use App\Strategies\StatusContext;
 use Illuminate\Http\Request;
+use Illuminate\Pipeline\Pipeline;
 use Symfony\Component\HttpFoundation\Response;
 
 class DocumentsController extends Controller {
@@ -32,4 +35,16 @@ class DocumentsController extends Controller {
        
     }
  
+    public function saveWithPipeline(Request $request){
+            $description=app(Pipeline::class)
+                ->send($request->get('description'))
+                ->through(
+                    [
+                        RemoveInsults::class,
+                        EncodeBase64::class
+                    ]
+                )->then(fn($description)=>$description);
+            $document=Documents::factory(1)->create(['description'=>$description]);
+            return response()->json($document,Response::HTTP_CREATED);
+    }
 }

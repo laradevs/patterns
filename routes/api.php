@@ -18,3 +18,4 @@ Route::get('/data', [\App\Http\Controllers\DocumentsController::class,'create'])
 Route::post('/change/{document}', [\App\Http\Controllers\DocumentsController::class,'changeStatus'])
     ->where(['document'=>"[0-9]+"]);
 
+Route::post('/pipeline', [\App\Http\Controllers\DocumentsController::class,'saveWithPipeline']);
